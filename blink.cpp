@@ -1,8 +1,9 @@
-/*Author: PauMB
-  Program: turn off & turn on a led
-  Created: 07/28/14
-  Company: HedaSoft
-*/
+/**************************************
+* Author: PauMB                       *
+* Program: turn off & turn on a led   *
+* Created: 07/28/14                   *
+* Company: HedaSoft                   *
+**************************************/
 
 //Include arduPi library
 #include "arduPi.h"
