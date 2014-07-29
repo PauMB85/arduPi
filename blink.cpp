@@ -1,5 +1,20 @@
+/*Author: PauMB
+  Program: turn off & turn on a led
+  Created: 07/28/14
+  Company: HedaSoft
+*/
+
+//Include arduPi library
 #include "arduPi.h"
 
+//Needed for Serial communication
+SerialPi Serial;
+ 
+//Needed for accesing GPIO (pinMode, digitalWrite, digitalRead, i2C functions)
+WirePi Wire;
+ 
+//Needed for SPI
+SPIPi SPI;
 /*********************************************************
  *  IF YOUR ARDUINO CODE HAS OTHER FUNCTIONS APART FROM  *
  *  setup() AND loop() YOU MUST DECLARE THEM HERE        *
