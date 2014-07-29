@@ -1,0 +1,62 @@
+/*************************************************
+* Author: PauMB                                  *
+* Program: turn off & turn on a led with button  *
+* Created: 07/28/14                              *
+* Company: HedaSoft                              *
+*************************************************/
+
+//Include ArduPi library
+#include "arduPi.h"
+
+//Needed for Serial communication
+SerialPi Serial;
+
+//Needed for accesing GPIO (pinMode, digitalWrite, digitalRead, I2C functions)
+WirePi Wire;
+
+//Needed for SPI
+SPIPi SPI;
+
+/*********************************************************
+ *  IF YOUR ARDUINO CODE HAS OTHER FUNCTIONS APART FROM  *
+ *  setup() AND loop() YOU MUST DECLARE THEM HERE        *
+ * *******************************************************/
+
+/**************************
+ * YOUR ARDUINO CODE HERE *
+ * ************************/
+
+//pins
+int button = 2;
+int led = 7;
+
+void setup(){
+
+        pinMode(button,INPUT); //pin 2 read the button
+        pinMode(led,OUTPUT);  //pin 7 turn on || turn of the led
+        Serial.begin(9600);
+}
+
+void loop(){
+
+        if(digitalRead(button) == HIGH){
+                fprintf(stdout,"release the button and turn off the led\n");
+                digitalWrite(led,HIGH);
+        }
+        else{
+                digitalWrite(led,LOW);
+                fprintf(stdout,"Push the Button and turn on the led\n");
+        }
+        delay(1000);
+
+}
+
+int main (){
+        setup();
+        while(1){
+                loop();
+        }
+        return (0);
+}
+
+
