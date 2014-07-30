@@ -40,12 +40,12 @@ void setup(){
 void loop(){
 
         if(digitalRead(button) == HIGH){
-                fprintf(stdout,"release the button and turn off the led\n");
+                fprintf(stdout,"release the button and the led turn off\n");
                 digitalWrite(led,HIGH);
         }
         else{
                 digitalWrite(led,LOW);
-                fprintf(stdout,"Push the Button and turn on the led\n");
+                fprintf(stdout,"Push the Button and the led turn on\n");
         }
         delay(1000);
 
